@@ -1,0 +1,111 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="default.css">
+    <title>Mini-Prj</title>
+  </head>
+  <body>
+    <div class="section">
+      <div class="morphism-div">
+        <img src="./assets/img/bg.png" alt="background img" id="left-img" />
+
+        <div class="form-div">
+          <div class="login-div">
+            <h4 id="title">Online Notes Sharing</h4>
+
+            <form action="./login.php" method="post" class="form-login">
+              <input type="text"name="uname" placeholder="User Name" />
+              <input type="password" name="pass" placeholder="Password" />
+              <input type="submit" id="input-submit" />
+            </form>
+            <form action="./signup.php" method="post" class="form-signup hidden" onsubmit="return formValidate()">
+              <input type="text" name="fname" placeholder="Full Name" />
+              <input type="text" name="uname" placeholder="Create Username" />
+              <input type="email" name="email" placeholder="example@mail.com" />
+              <input
+                type="password"
+                placeholder="Create Password"
+                class="create-password"
+                name="pass"
+              />
+              <input
+                type="password"
+                placeholder="Confirm Password"
+                class="confirm-password"
+                name="con-pass"
+              />
+              <div class="gender-input">
+                <input type="radio" name="gender" value="male" id="" />
+                <label for="gender" value="male">Male</label>
+                <input type="radio" name="gender" value="female" id="" />
+                <label for="gender" >Female</label>
+              </div>
+              <div class="dropdown-div">
+                <p>You're Role:</p>
+                <select id="role-dropdown" name="role">
+                  <option value="teacher">Teacher</option>
+                  <option value="student">Student</option>
+                  </select>
+              </div>
+              <input type="text" name="department" placeholder="Department" />
+              <input type="submit" id="input-submit" value="Sign Up" />
+            </form>
+            <p class="new-user">
+              If you are new
+              <a href="#" id="signup-link" onclick="formSwap('signup')"
+                >Sign Up...!!</a
+              >
+            </p>
+            <p class="old-user hidden">
+              If you have an account
+              <a href="#" id="login-link" onclick="formSwap('login')"
+                >Login..!</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const formSwap = (para) => {
+      var signup = document.querySelector(".new-user");
+      var login = document.querySelector(".old-user");
+      var loginForm = document.querySelector(".form-login");
+      var signupForm = document.querySelector(".form-signup");
+      console.log("clicked");
+      switch (para) {
+        case "signup":
+          console.log("signup");
+          let div = document.querySelector(".form-signup");
+          div.style.gap = "1rem";
+          login.classList.remove("hidden");
+          signupForm.classList.remove("hidden");
+          signup.classList.add("hidden");
+          loginForm.classList.add("hidden");
+          break;
+        case "login":
+          console.log("login");
+          login.classList.add("hidden");
+          signupForm.classList.add("hidden");
+          signup.classList.remove("hidden");
+          loginForm.classList.remove("hidden");
+          break;
+      }
+    };
+
+    const formValidate = (e) => {
+      e.preventDefault()
+      if(document.querySelector(".create-password") != document.querySelector(".confirm-password")){
+        alert("password does not match")
+        return false
+      }
+    }
+  </script>
+</html>

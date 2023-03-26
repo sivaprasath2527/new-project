@@ -1,0 +1,22 @@
+.upload-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-around;
+    gap: 1rem;
+}
+.upload-form input{
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    padding: 1%;
+    background-color: #0F3460;
+    color: #fff;
+}
+.upload-form input::placeholder{
+    color: #fff;
+    font-weight: 400;
+}
+.buttonClass{
+    width: max-content;
+}

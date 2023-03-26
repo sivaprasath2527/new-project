@@ -1,0 +1,116 @@
+body {
+    margin: 0px;
+    padding: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100vw;
+    min-height: 100vh;
+    /* background-image: url(./assets/img/bg.png); */
+    background-color: #85CDFD;
+
+}
+
+.morphism-div {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+#left-img {
+    width: 60rem;
+}
+
+.form-div {
+    background-color: #fff;
+    /* height: 100%; */
+}
+
+#title {
+    font-size: 3rem;
+    margin: 0%;
+}
+
+.login-div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+    flex-direction: column;
+    box-sizing: border-box;
+    gap: 1%;
+    padding: 1rem;
+    background-color: #fff;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.form-login,
+.form-signup {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.form-login input,
+.form-signup input {
+    border-radius: 5px;
+    border: none;
+    font-size: 1.5rem;
+    padding: 2.5%;
+    background-color: #0F3460;
+    color: #fff;
+}
+
+.form-login input::placeholder,
+.form-signup input::placeholder {
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+}
+
+.form-login input:active {
+    border: 1px solid #d35;
+}
+
+#input-submit {
+    padding: 3% 20%;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #85CDFD;
+}
+
+#input-submit:hover {
+    background-color: #404258;
+    color: #fff;
+
+}
+
+.dropdown-div {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    max-height: 6%;
+}
+
+#role-dropdown {
+    padding: .0rem 1rem;
+    font-size: 1rem;
+}
+
+.hidden {
+    display: none;
+}
